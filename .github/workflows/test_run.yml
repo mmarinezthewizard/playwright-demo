@@ -27,4 +27,4 @@ jobs:
 
     - name: Run Pytest tests
       run: |
-        python3 -m pytest -v tests/test_my_application_pytest.py -k "test_title" -appUrl https://www.python.org/ --html=./test-report/report.html
+        python3 -m pytest -v tests/test_my_application_pytest.py -k "test_title" --appUrl https://www.python.org/ --html=./test-report/report.html
