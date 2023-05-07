@@ -44,6 +44,7 @@ def params(request):
 def close_browser():
     print("close_browser")
     if pytest_browser is not None:
+        pytest_browser.page.screenshot(path="./test-report/test_screenshot.png")
         pytest_browser.page.close()
         pytest_browser.webdriver.stop()
 
@@ -55,7 +56,6 @@ def setup_browser(url):
     global pytest_browser
     pytest_browser = ChromeBrowser()
     pytest_browser.page.goto(url)
-    sleep(5)
 
 
 @pytest.fixture(autouse=True)
@@ -66,3 +66,8 @@ def setup_and_teardown(params):
     yield
 
     close_browser()
+
+
+def pytest_html_report_title(report):
+    report.title = "MY PYTEST REPORT"
+
