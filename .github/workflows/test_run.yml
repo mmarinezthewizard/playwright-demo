@@ -1,0 +1,30 @@
+
+name: Run Playwright tests with Pytest
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Pytest tests
+      run: |
+        python3 -m pytest -v tests/test_my_application_pytest.py -k "test_title" --appUrl https://www.python.org/ --html=./test-report/report.html
