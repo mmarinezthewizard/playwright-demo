@@ -43,13 +43,13 @@ def params(request):
 
 
 def close_browser():
-    print("close_browser")
+    print("Closing Browser")
     if pytest_browser is not None:
         pytest_browser.screenshot(path="./test-report/test_screenshot.png")
 
 
 def setup_browser(url):
-    print("setup_browser")
+    print("Opening Browser")
     global pytest_browser
     pytest_browser = ChromeBrowser().page
     pytest_browser.goto(url)

@@ -9,7 +9,9 @@ class TestMyApp:
     @pytest.mark.order(2)
     def test_username_alert(self):
         Factory.loginpage._login_button.click()
+        print('Click login button')
         expect(Factory.loginpage._username_required_alert).to_be_visible()
+        print('Validate alert visibility')
 
 
     @pytest.mark.skip
@@ -28,4 +30,6 @@ class TestMyApp:
     @pytest.mark.order(1)
     def test_login_to_inventory(self, params):
         Factory.loginpage.login_to_sauce_iventory(params)
-        expect(ChromeBrowser().page).to_have_url('https://www.saucedemo.com/inventory.html')
+        print('Add valid credentials')
+        expect(ChromeBrowser().page).to_have_url('https://www.saucedemo.com/invento.html')
+        print('Validate URL expected content')
