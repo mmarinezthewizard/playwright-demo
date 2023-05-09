@@ -1,4 +1,5 @@
 from webdriver.Chrome import ChromeBrowser
+from playwright.sync_api import Page
 from time import sleep
 import pytest
 
@@ -42,20 +43,16 @@ def params(request):
 
 
 def close_browser():
-    print("close_browser")
+    print("\nClosing Browser\n")
     if pytest_browser is not None:
-        pytest_browser.page.screenshot(path="./test-report/test_screenshot.png")
-        pytest_browser.page.close()
-        pytest_browser.webdriver.stop()
-
+        pytest_browser.screenshot(path="./test-report/test_screenshot.png")
 
 
 def setup_browser(url):
-    print("setup_browser")
-    
+    print("\nOpening Browser\n")
     global pytest_browser
-    pytest_browser = ChromeBrowser()
-    pytest_browser.page.goto(url)
+    pytest_browser = ChromeBrowser().page
+    pytest_browser.goto(url)
 
 
 @pytest.fixture(autouse=True)
