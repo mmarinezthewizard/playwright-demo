@@ -18,6 +18,7 @@ class LoginPage:
     def login_to_sauce_iventory(self, params):
         self._input_username.fill(params["appUser"])
         self._input_password.fill(params["appPassword"])
+        sleep(2)
         self._login_button.click()
 
 
