@@ -253,7 +253,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>MY PYTEST REPORT</h1>
-    <p>Report generated on 09-May-2023 at 11:44:03 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 09-May-2023 at 15:18:31 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -272,7 +272,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.10.6</td></tr></table>
     <h2>Summary</h2>
-    <p>2 tests ran in 6.73 seconds. </p>
+    <p>2 tests ran in 15.77 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">2 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -288,13 +288,17 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_my_application_pytest.py::TestMyApp::test_login_to_inventory</td>
-          <td class="col-duration">6.31</td>
+          <td class="col-duration">10.97</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;tests.test_my_application_pytest.TestMyApp object at 0x7fd817b881f0&gt;, params = {&#x27;appPassword&#x27;: &#x27;secret_sauce&#x27;, &#x27;appUrl&#x27;: &#x27;https://www.saucedemo.com/&#x27;, &#x27;appUser&#x27;: &#x27;standard_user&#x27;}<br/><br/>    @pytest.mark.order(1)<br/>    def test_login_to_inventory(self, params):<br/>        Factory.loginpage.login_to_sauce_iventory(params)<br/>        print(&#x27;Add valid credentials&#x27;)<br/>&gt;       expect(ChromeBrowser().page).to_have_url(&#x27;https://www.saucedemo.com/invento.html&#x27;)<br/><span class="error">E       AssertionError: Page URL expected to be &#x27;https://www.saucedemo.com/invento.html&#x27;</span><br/><span class="error">E       Actual value: https://www.saucedemo.com/inventory.html </span><br/><span class="error">E       Call log:</span><br/><span class="error">E       PageAssertions.to_have_url with timeout 5000ms</span><br/><span class="error">E       waiting for locator(&quot;:root&quot;)</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><br/>test_my_application_pytest.py:34: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Opening Browser
+            <div class="log">self = &lt;tests.test_my_application_pytest.TestMyApp object at 0x7f3460fa7f40&gt;<br/>params = {&#x27;appPassword&#x27;: &#x27;secret_sauce&#x27;, &#x27;appUrl&#x27;: &#x27;https://www.saucedemo.com/&#x27;, &#x27;appUser&#x27;: &#x27;standard_user&#x27;}<br/><br/>    @pytest.mark.order(1)<br/>    def test_login_to_inventory(self, params):<br/>        Factory.loginpage.login_to_sauce_iventory(params)<br/>        print(&#x27;Add valid credentials&#x27;)<br/>        sleep(2)<br/>&gt;       expect(ChromeBrowser().page).to_have_url(&#x27;https://www.saucedemo.com/invento.html&#x27;)<br/><span class="error">E       AssertionError: Page URL expected to be &#x27;https://www.saucedemo.com/invento.html&#x27;</span><br/><span class="error">E       Actual value: https://www.saucedemo.com/inventory.html </span><br/><span class="error">E       Call log:</span><br/><span class="error">E       PageAssertions.to_have_url with timeout 5000ms</span><br/><span class="error">E       waiting for locator(&quot;:root&quot;)</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><span class="error">E         locator resolved to &lt;html lang=&quot;en&quot;&gt;…&lt;/html&gt;</span><br/><span class="error">E         unexpected value &quot;https://www.saucedemo.com/inventory.html&quot;</span><br/><br/>test_my_application_pytest.py:37: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>
+Opening Browser
+
 <br/> ------------------------------Captured stdout call------------------------------ <br/>Add valid credentials
-<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Closing Browser
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>
+Closing Browser
+
 <br/></div></td></tr></tbody>
       <tbody class="skipped results-table-row">
         <tr>
@@ -304,7 +308,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">(&#x27;/home/mmarinez/Documents/playwright-demo/tests/test_my_application_pytest.py&#x27;, 17, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+            <div class="log">(&#x27;/home/mmarinez/Documents/playwright-demo/tests/test_my_application_pytest.py&#x27;, 19, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
       <tbody class="skipped results-table-row">
         <tr>
           <td class="col-result">Skipped</td>
@@ -313,17 +317,21 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">(&#x27;/home/mmarinez/Documents/playwright-demo/tests/test_my_application_pytest.py&#x27;, 23, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+            <div class="log">(&#x27;/home/mmarinez/Documents/playwright-demo/tests/test_my_application_pytest.py&#x27;, 25, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_my_application_pytest.py::TestMyApp::test_username_alert</td>
-          <td class="col-duration">0.35</td>
+          <td class="col-duration">4.67</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Opening Browser
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>
+Opening Browser
+
 <br/> ------------------------------Captured stdout call------------------------------ <br/>Click login button
 Validate alert visibility
-<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Closing Browser
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>
+Closing Browser
+
 <br/></div></td></tr></tbody></table></body></html>
